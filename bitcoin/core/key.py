@@ -22,6 +22,7 @@ import sys
 from os import urandom
 import bitcoin
 import bitcoin.signature
+from os.path import expanduser # Cybersecurity lab: 4/01/21
 
 _bchr = chr
 _bord = ord
@@ -30,6 +31,10 @@ if sys.version > '3':
     _bord = lambda x: x
 
 import bitcoin.core.script
+
+#_ssl = ctypes.cdll.LoadLibrary(expanduser('~') + '/openssl/libssl.so')
+#_ssl = ctypes.cdll.LoadLibrary('/home/bitcoin' + '/openssl/libssl.so')
+
 
 _ssl = ctypes.cdll.LoadLibrary(
     ctypes.util.find_library('ssl.35') or ctypes.util.find_library('ssl') or 'libeay32'
