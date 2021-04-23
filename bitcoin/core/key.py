@@ -40,6 +40,11 @@ _ssl = ctypes.cdll.LoadLibrary(
     ctypes.util.find_library('ssl.35') or ctypes.util.find_library('ssl') or 'libeay32'
 )
 
+#import sys
+#print('Hello')
+#print(ctypes.util.find_library('ssl'))
+#sys.exit()
+
 _libsecp256k1_path = ctypes.util.find_library('secp256k1')
 _libsecp256k1_enable_signing = False
 _libsecp256k1_context = None

@@ -24,6 +24,8 @@ sudo make -j
 
 
 # Install python-bitcoinlib
+sudo apt install tox
+
 cd ~
 if [ ! -d "python-bitcoinlib" ] 
 then
